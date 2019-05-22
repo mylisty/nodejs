@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type=type"text/css"
+    href="/public/stylesheets/style.css">
+
+    <p style="background: #00B7Ff" >
+
+        我是一个文本
+    </p>
+</head>
+<body>
+  <div id="only">
+  </div>
+  <div></div>
+  <input name="sdf">
+    <script type="text/javascript" >
+
+
+     /*   const  test= document.getElementById('only');
+        const div  = document.getElementsByTagName('div');//标签名 获取的数组
+                  document.getElementsByName('name');
+           document.query//触发磁条*/
+           //document.queryCommandEnabled()
+        const div  = document.getElementsByTagName('div')[0];
+        const  divs = document.createElement('div') ;// demo 创建标签
+        document.body.appendChild(divs)
+       /* const name = '222';
+        const  a = {
+            name:'111',
+            say: function () {
+                console.log(this.name)
+            }
+        };
+        a.say();
+        const  b = {
+            name: '2234',
+            say: function (fun) {
+                fun();
+            }
+        };
+        b.say(a.say());
+
+        this.a.say();*/
+
+
+
+
+/*
+        (function test() {
+            console.log('sdf')
+        }());
+
+        function f() {
+
+
+        };
+        (1,2);
+
+        parseInt(3,4);*/
+        // 3的4进制
+        /*
+        var  obj = {
+            name: 'sdfd',
+            sdf: 'sdf',
+            ssdflj: {
+                lasd:'sdfs'
+            }
+
+        };
+
+        for(prop in obj){
+           // console.log(prop);
+            //obj.prop  底层 obj[prop]
+            // console.log(obj[prop]) //正确
+              if (obj.hasOwnProperty(prop)) { //表示自己的属性 in 表示
+                  console.log(obj[prop])
+              }else {
+                  console.log('sdfsdf'+ obj[prop])
+              }
+           /!* if (prop in obj){
+                console.log(obj[prop])
+            }*!/
+        }*/
+/*
+        var deng = {
+            smoke: function () {
+                console.log('smoke');
+                return this;
+            },
+            tell: function () {
+                console.log('sdfsf');
+                return this
+            }
+
+        };
+        deng.smoke().tell().smoke();*/
+
+
+/* var ss = (function () {
+     console.log('hellows')
+ }());
+ function f() {
+   console.log('sjdlsjfl')
+ }*/
+ /*    //   继承： 圣杯模式
+        Father.prototype.name = 'sdf';
+        function Father() {
+        }
+        function Son(name) {
+        }
+
+        Son.prototype.age  ='sdfs';
+        var inherit = (function () {
+            var F = function () {
+            };
+           return function (Targe, Orign) {
+               F.prototype = Orign.prototype;
+               Targe.prototype = new F();
+               Targe.prototype.constructor = Orign;
+               Targe.prototype.uber = Orign.prototype;
+           }
+        })();
+        inherit(Son,Father);
+     /!*  function inherit(Targe,Orign) {
+           function F() {}
+           F.prototype = Orign.prototype;
+           Targe.prototype = new F();
+           Targe.prototype.constructor = Orign;
+           Targe.prototype.uber = Orign.prototype;
+       }*!/
+       const son  = new Son();
+     //
+*/
+
+
+
+
+
+/*1. call apply
+         function Person(name ,age) {
+             this.name  = name;
+             this.age = age;
+         }
+
+         function Student(name,age) {
+             Person.apply(this,[name,age]);
+         }
+         const obj = {
+
+         };
+         var student = new Student('adsf',3);
+       //obj 代替了Person 里面的this
+        // Person.call(obj,"sdf",123);
+       //Person.call() == > Person()
+         class Parsons {
+             constructor(name,age){
+                 this.name = name;
+                 this.age = age;
+             }
+             gradels(){
+                 console.log('hellow')
+             }
+         }
+         class Students extends Parsons {
+             constructor(name,age,grage){
+                 super(name,age);
+                 this.grade = grage;
+             }
+         }
+         const stduenss = new Students('sdf', 12, 'sdfs');
+
+*/
+
+
+//this 调用者是谁就指谁
+    //Person.prototype 原型
+    // Person.prototype {} 原祖先
+    /*     Person.prototype.name = '332';//共有组件 放在_proto_
+         function Person() {
+         }
+        const se =  new Person();
+        console.log(se.name);
+        Person.prototype.name = 'cheeewr';
+         /!* Person.prototype ={
+              name: 'sljdfl'   //这是新的对象
+          };*!/
+    //都拥有name 属性
+    // new Person() //
+   Object.prototype.toString().call(123);*/
+
+          /*  var  str = 'aaac';
+            var strs = undefined;
+            str.len = 2;//
+            //new String('aaac').len = 2  ; delete ;
+            //new String('aaac').len = undefined;
+            console.log(str.len);*/
+          /*var str = 'asd';
+          str += 2;
+          console.log(str.length + typeof str)*/
+           /* var a = 123;
+            function Persion() {
+                a= 343;
+                this.a = 334;
+                console.log(a);
+                console.log(this.a);
+            }
+            var pser = new Persion();
+
+            function f() {
+
+            }
+            function f() {
+
+            }*/
+            /* function f(a,b,c) {
+                 var d = arguments[2]-10;
+                 c  = 10;
+                 console.log(arguments[2] +" "+ d)
+             }
+             f(1,2,3);*/
+
+          /*  const  str = 'Hello world,和 我的梦醒了的饿数。';
+            let  count = 0;
+          for (let i = 0; i < str.length; i++) {
+
+            let  sd =   str.charCodeAt(i);
+
+              if (sd > 255){
+                  //占用两个字节
+                 count += 2;
+              }else {
+                  count += 1;
+              }
+          }
+          console.log(count)*/
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

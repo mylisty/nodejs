@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+</head>
+<body>
+     <div>
+         <span><%= title %></span>
+         <div>
+             <form action="/users/search" method="post">
+                 pacNodeTree<label>
+                 <input type="text" name="spacNodeTree" value="" class="text" >
+             </label> &nbsp;&nbsp;
+                 <input type="submit" value ='查询密码'>
+             </form>
+         </div>
+         <div>
+             <form action="/users/add" method="post">
+                 pacNodeTree<label>
+                 <input type="text" name="pacNodeTree" value="" class="text" >
+             </label> &nbsp;&nbsp;
+                 password<label>
+                 <input type="text" name="password" value="" class="text">
+             </label>&nbsp;&nbsp;
+                 <input type="submit" value ='新增'>
+             </form>
+         </div>
+         <div>
+             <form action="/users/update" method="post">
+                 pacNodeTree<label>
+                 <input type="text" name="pacNodeTree" value="" class="text" >
+             </label> &nbsp;&nbsp;
+                 password<label>
+                 <input type="text" name="password" value="" class="text">
+             </label>&nbsp;&nbsp;
+                 <input type="submit" value ='修改密码'>
+             </form>
+         </div>
+         <div>
+             <form action="/users/del" method="post">
+                 pacNodeTree<label>
+                 <input type="text" name="pacNodeTree" value="" class="text" >
+             </label> &nbsp;&nbsp;
+
+                 <input type="submit" value ='删除密码'>
+             </form>
+         </div>
+     </div>
+     <table style="">
+         <tr>
+             <th width="10%">编号</th>
+             <th width="10%">账户</th>
+             <th width="10%">操作密码</th>
+         </tr>
+         <% if (datas.length) { %>
+         <% datas.forEach(function(user){ %>
+         <tr>
+             <td><%= user.id %></td>
+             <td><%= user.pacNodeTree %></td>
+             <td><%= user.password %></td>
+         </tr>
+         <% }) %>
+         <% } %>
+     </table>
+</body>
+</html>
